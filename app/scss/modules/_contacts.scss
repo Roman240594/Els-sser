@@ -1,0 +1,105 @@
+.contacts {
+    padding: 50px 0 10px;
+    border-bottom: 1px solid $color-athens-gray;
+
+    @include respond-to(xl) {
+        padding-bottom: 50px;
+    }
+
+    @include respond-to(xxl) {
+        padding: 73px 0 77px;
+    }
+
+    &__wrapper {
+        @include respond-to(lg) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        width: 155px;
+
+        @include respond-to(xl) {
+            width: 197px;
+        }
+        
+        &-wrapper {
+            text-align: center;
+            margin-bottom: 27px;
+            
+            @include respond-to(lg) {
+                padding-top: 68px;
+                order: 1;
+            }
+        }
+    }
+
+    &__title {
+        letter-spacing: -0.4px;
+        margin: 0 auto 32px;
+
+        @include respond-to(lg) {
+            font-size: 34px;
+            line-height: 126%;
+            padding-top: 73px;
+        }
+    }
+
+    &__content {
+        margin: 0 auto;
+
+        @include respond-to(md) {
+            max-width: 420px;
+        }
+    }
+
+    &__text {
+        padding: 0 17px;
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        font-family: $font-bbc-md;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 144%;
+        color: $color-white;
+        width: 359px;
+        height: 69px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s;
+
+        &:hover {
+            color: $color-grey;
+        }
+
+        @include respond-to(md) {
+            width: 420px;
+        }
+
+        &-wrapper {
+            background: linear-gradient(180deg, #0C5CD6 0%, rgba(0, 56, 140, 0) 100%), #004FC7;
+            border: 1px solid #FFFFFF;
+            box-shadow: 0px 1px 4px rgba(48, 67, 133, 0.5);
+            border-radius: 12px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 125px;
+                height: 15px;
+                background-image: url(../assets/icons/contact-arrow.svg);
+                background-repeat: no-repeat;
+                left: 0;
+                bottom: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

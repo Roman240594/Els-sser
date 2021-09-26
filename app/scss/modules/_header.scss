@@ -1,0 +1,87 @@
+.header {
+    padding: 6px 0 8px;
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.1);
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bg-color {
+        background-color: $color-white;
+    }
+}
+
+.logo {
+    &__img {
+    max-width: 82px;
+    }
+}
+
+.nav {
+    &__link {
+        font-family: $font-noto-normal;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 118%;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.32px;
+        color: $color-mako;
+        background-color: transparent;
+        padding: 5px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        transition: all .5s;
+
+        &:hover {
+            color: $color-dodger-blue;
+            background-color: transparent;
+            border: 2px solid $color-carskill-white;
+            border-radius: 8px;
+        }
+
+        &:focus {
+            color: $color-dodger-blue;
+            background-color: transparent;
+            border: 2px solid $color-carskill-white;
+            box-shadow: 0 0 0 0 transparent;
+        }
+
+        @media screen and (min-width: 1285px) {
+            padding: 5px 10px;
+        }
+
+        @include respond-to(xxl) {
+            padding: 5px 15px;
+        }
+    }
+}
+
+.dropdown-menu {
+    min-width: 100%;
+}
+
+.dropdown-toggle::after {
+    border: solid $color-mako;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: .400em;
+    margin-bottom: .200em;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url(../assets/icons/burger-menu.png);
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+
+    &:focus {
+        box-shadow: none;
+        border-color: transparent;
+    }
+}

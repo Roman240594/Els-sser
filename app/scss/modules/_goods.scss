@@ -1,0 +1,104 @@
+.goods {
+    padding-bottom: 60px;
+
+    @include respond-to(md) {
+        padding: 30px 0 80px;
+    }
+
+    @include respond-to(xl) {
+        padding-bottom: 135px;
+    }
+
+    @include respond-to(xxl) {
+        padding-bottom: 150px;
+    }
+
+    &__title {
+        margin-bottom: 18px;
+    }
+}
+
+.carousel-inner {
+    position: relative;
+    @include respond-to(lg) {
+        width: 360px;
+        margin: 0 auto 30px;
+    }
+
+    @include respond-to(xl) {
+        width: 610px;
+    }
+}
+
+.carousel__navigation {
+    position: relative;
+}
+
+.carousel__arrows {
+    display: none;
+
+    @include respond-to(lg) {
+        display: block;
+        position: relative;
+        top: 0;
+    }
+}
+
+.carousel-control {
+    background: $color-white;
+    box-shadow: 0px 0px 21px rgba(64, 68, 75, 0.14);
+    border-radius: 8px;
+    width: 90px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+
+    @include respond-to(xxl) {
+        width: 126px;
+        height: 78px;
+    }
+}
+
+.carousel-control-prev {
+    @include respond-to(lg) {
+        left: 20%;
+    }
+}
+
+.carousel-control-next {
+
+    @include respond-to(lg) {
+        left: 34%;
+    }
+}
+
+.carousel-indicators [data-bs-target]{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #80ABFF;
+    opacity: 0.35;
+    border: 1px solid #0045AC;
+}
+
+.carousel-indicators {
+    top: 18px;
+
+    @include respond-to(lg) {
+        top: 0;
+    }
+
+    & .active {
+        background: linear-gradient(180deg, #005BE4 0%, rgba(0, 96, 241, 0) 100%), #004FC7;
+        border: 1px solid #BED8FF;
+    }
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../assets/icons/prev.svg);
+}
+
+.carousel-control-next-icon {
+    background-image: url(../assets/icons/next.svg);
+}

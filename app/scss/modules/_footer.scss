@@ -1,0 +1,74 @@
+.footer {
+    padding: 45px 0 50px;
+
+    @include respond-to(xxl) {
+        padding: 50px 0 56px
+    }
+
+    &__wrapper {
+        padding: 0 17px;
+        margin-bottom: -20px;
+
+        @media screen and (min-width: 400px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__list {
+        font-family: $font-noto-bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 200%;
+        letter-spacing: -0.4px;
+        color: $color-grey;
+        margin-bottom: 20px;
+        text-align: left;
+
+        &:last-child {
+            @include respond-to(md) {
+                padding-top: 30px;
+            }
+        }
+
+        @include respond-to(xl) {
+            font-size: 17px;
+            line-height: 188%;
+        }
+    }
+
+    &__item {
+        font-family: $font-noto-normal;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    &__link {
+        font-family: $font-noto-normal;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 200%;
+        letter-spacing: -0.4px;
+        color: $color-grey;
+
+        @include respond-to(md) {
+            font-size: 17px;
+            line-height: 188%;
+        }
+
+        &_tel {
+            color: $color-mako;
+        }
+
+        &_mail {
+            color: $color-dodger-blue;
+        }
+
+        &_underline {
+            text-decoration: underline;
+        }
+    }
+}

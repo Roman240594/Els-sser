@@ -1,0 +1,46 @@
+.description {
+    @include respond-to(lg) {
+        display: flex;
+    }
+
+    &__content {
+        padding-bottom: 16px;
+        background: linear-gradient(180deg, #163DA2 0%, #003584 100%);
+
+        @include respond-to(lg) {
+            flex-basis: 100%;
+            max-width: 100%;
+            display: flex;
+        }
+    }
+
+    &__wrapper {
+
+        @include respond-to(lg) {
+            max-width: 500px;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        @media screen and (min-width: 1100px) {
+            flex-basis: 545px;
+            width: 545px;
+        }
+    }
+
+    &__title {
+        color: $color-zirkon;
+        padding: 39px 0 16px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 200%;
+        letter-spacing: -0.4px;
+        color: $color-zirkon;
+    }
+}

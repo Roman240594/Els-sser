@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body { 
+    height: 100%;
+}
+
+ol, ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
+
+    @include respond-to(md) {
+        max-width: calc(100% - 80px);
+        margin: 0 auto;
+    }
+
+    @include respond-to(lg) {
+        max-width: calc(100% - 140px);
+        margin: 0 auto;
+    }
+
+    @include respond-to(xl) {
+        max-width: calc(100% - 200px);
+        margin: 0 auto;
+    }
+
+    @include respond-to(xxl) {
+        max-width: calc(100% - 240px);
+        margin: 0 auto;
+    }
+
+    @include respond-to(xxxl) {
+        max-width: calc(100% - 300px);
+        margin: 0 auto;
+    }
+}
+
+.title {
+    font-family: $font-bbc-bd, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 200%;
+    letter-spacing: 2.42px;
+    color: $color-blue;
+    text-align: center;
+    letter-spacing: 2.42px;
+    text-transform: uppercase;
+
+    &_dark {
+        font-family: $font-bbc-md,sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 200%;
+        letter-spacing: 4.42px;
+        color: $color-woodsmoke;
+    }
+}
+
+.text {
+    font-family: $font-noto-normal, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 188%;
+    color: $color-mako;
+
+    &_bold {
+        font-family: $font-noto-bold;
+        color: $color-woodsmoke;
+        
+        &-light {
+            color: $color-zirkon;
+        }
+    }
+
+    &_italic {
+        font-family: $font-noto-italic, sans-serif;
+        font-style: italic;
+    }
+}
+
+.flex {
+    display: flex;
+}

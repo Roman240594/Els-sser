@@ -1,0 +1,111 @@
+.characteristic {
+    padding: 56px 0 32px;
+
+    @include respond-to(md) {
+        padding: 0 0 30px;
+    }
+
+    @include respond-to(xl) {
+        padding-bottom: 50px;
+    }
+
+    @include respond-to(xxl) {
+        padding-bottom: 75px;
+    }
+
+    &__wrapper {
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+        padding: 45px 15px; 
+    }
+
+    &__title {
+        margin-bottom: 37px;
+
+        @include respond-to(xl) {
+            padding-bottom: 50px;
+        }
+    
+        @include respond-to(xxl) {
+            padding-bottom: 71px;
+        }
+    }
+
+    &__content {
+        @include respond-to(lg) {
+           margin-right: -30px;;
+        }
+
+        @include respond-to(xl) {
+            padding: 0 30px;
+        }
+    
+        @include respond-to(xxl) {
+            padding: 0 54px;
+        }
+    }
+
+    &__list {
+        padding-left: 15px;
+        margin-bottom: -10px;
+        counter-reset: section;
+
+        @include respond-to(lg) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 50%;
+            max-height: 670px;
+        }
+
+        @media screen and (min-width: 1440px) {
+            max-height: 650px;
+        }
+
+        & li {
+            position: relative;
+
+            &::before {
+                counter-increment: section;
+                content: counter(section) ".";
+                position: absolute;
+                left: -22px;
+                top: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid $color-mako;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+            }
+        }
+    }
+    
+    &__item {
+        font-family: $font-noto-normal, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 222%;
+        letter-spacing: -0.4px;
+        color: $color-mako;
+        padding-left: 10px;
+        padding-bottom: 10px;
+
+        @include respond-to(lg) {
+            margin-right: 30px;
+        }
+
+        @include respond-to(xl) {
+            padding-bottom: 30px;
+        }
+
+        &_bold {
+            font-family: $font-noto-bold, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            color: $color-woodsmoke;
+        }
+    }
+}
